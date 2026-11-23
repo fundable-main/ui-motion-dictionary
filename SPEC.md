@@ -1,11 +1,11 @@
-# UI 모션 사전 — 데모 제작 규격 (모든 에이전트 필독)
+# UI 모션 라이브러리 — 데모 제작 규격 (모든 에이전트 필독)
 
 목적: 마케터·디자이너·개발자가 UI 패턴 "이름"으로 소통할 수 있게, 100개 UI 패턴을 실제로 움직이는 데모 + 클로드에게 붙여 넣을 복붙 프롬프트로 보여주는 단일 HTML 사전.
 
 ## 파일 구조
 - `shell.html` — 공통 화면(헤더·검색·필터·카드·복사·재생). **수정 금지**(메인 에이전트만 수정).
 - `demos/<category>.js` — 카테고리별 데모 10개. 에이전트는 자기 담당 파일만 쓴다.
-- `build.py` — shell + demos를 합쳐 `../최종버전/UI_모션사전.html` 생성. `python3 build.py`
+- `build.py` — shell + demos를 합쳐 `dist/index.html` 생성. `python3 build.py`
 - `test.py` — Playwright로 열어 콘솔 에러·빈 데모 검사 + 카드 스크린샷. `python3 test.py --cat progress` (스크린샷: `작업파일/shots/<cat>/<id>_a.png`(재생 직후 0.3초), `_b.png`(2.2초 후))
 
 ## 데모 등록 형식 (demos/<category>.js)
