@@ -3,7 +3,7 @@
 UI 패턴을 **움직이는 데모 + 클로드에게 붙여 넣는 프롬프트**로 모아 둔 사내 레퍼런스입니다.
 디자이너·개발자·AI와 화면을 "이름"으로 소통하기 위해 만들었습니다.
 
-- 배포 주소: (GitHub Pages — 저장소 Settings › Pages 에 표시)
+- 배포 주소: https://fundable-main.github.io/ui-motion-dictionary/
 - `main` 브랜치에 push 하면 **자동으로 빌드·배포**됩니다(1~2분, Actions 탭에서 진행 확인).
 
 ## 폴더 구조
