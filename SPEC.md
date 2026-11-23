@@ -94,3 +94,16 @@ in01 토글 Toggle (pair in02) · in02 체크박스 Checkbox (pair in01) · in03
 #### feedback — 피드백·알림 (13)
 fb01 토스트 Toast (pair fb02) · fb02 스낵바 Snackbar (pair fb01) · fb03 팝업 Popup (pair fb04) · fb04 모달 Modal (pair fb03) · fb05 툴팁 Tooltip (pair fb06) · fb06 팝오버 Popover (pair fb05) · fb07 알림 배지 Notification badge · fb08 푸시 알림 Push notification · fb09 권한 요청 Permission request · fb10 코치마크 Coach mark · fb11 빈 화면 Empty state · fb12 에러 흔들림 Shake error · fb13 스플래시 Splash screen
 (나머지 7개 카테고리는 원래 vs 항목이 없어 그대로 유지)
+
+
+---
+## 확장 개정 (v3, 2026-11-23) — 113 → 250개
+- 카테고리 13개: 기존 10개 + `gesture`(제스처, gs) · `data`(데이터·차트, dt) · `media`(미디어, md).
+- 추가분은 `demos/<category>_2.js`(기존 카테고리)와 `demos/gesture.js`·`data.js`·`media.js`(신설)에 있다. 빌드는 `<category>.js` → `<category>_2.js` 순으로 읽는다.
+- 🔴 파일마다 독립된 `try{}` 블록으로 감싸진다. 다른 파일의 헬퍼는 쓸 수 없고, 헬퍼는 그 파일 안의 `const` 화살표 함수(파일 고유 접두사, 예: `ac2Ic`)로만 만든다. `function` 선언은 전역으로 새어 충돌하므로 금지.
+- 카드 규칙은 v2 그대로(카드 1장 = 패턴 1개, `pair`, 프롬프트 경계 구절). 프롬프트의 px 수치는 **실제 구현 기준**이고 데모는 축소 목업일 수 있다.
+- 프롬프트의 접근성 문구(prefers-reduced-motion 등)는 클로드에게 요청하는 내용이며, 데모가 그대로 구현해야 하는 것은 아니다.
+
+### 카테고리별 개수
+progress 19 · commerce 22 · action 27 · input 29 · search 17 · layout 21 · nav 20 · feedback 25 · motion 22 · style 22 · gesture 9 · data 9 · media 8 = 250
+(전체 목록은 `grep -hoE "id: '[a-z]+[0-9]+', ko: '[^']+', en: '[^']+'" demos/*.js` 로 확인 — 이 문서 위쪽의 100개 목록·v2 목록은 당시 기록이다)
