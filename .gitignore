@@ -1,0 +1,5 @@
+dist/
+shots/
+shots_dark/
+__pycache__/
+.DS_Store
